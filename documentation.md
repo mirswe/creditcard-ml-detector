@@ -10,6 +10,8 @@
 
 # Day Two
     Checked and went through the csv(data)
+    Scaled and Fit the data
+    Trained the imbalanced set
 ## Notes
     - used shape to get the rows and cols which the rows corresponds to each transaction made and theres 31 cols describing each transaction
         - the columns include:
@@ -27,5 +29,22 @@
             it struggles to detect fruad effectively
         - bro first try on imbalanced set i got an roc-auc score of 94, i didn't expect this, the model is doing pretty good before applying smote
         - but the downside to this is that the recall to fraud cases is pretty terrible
+
+## What I learned
+    Learned how to read data and view the columns and rows to check the data
+    Also learned how to what PCA transformed features are and how they work as far as in reducing and simplifying data
+    Learned what target variables (or in this case class columns) are and how they represent the output the model is trained to predict
+    Learned how to train, first trained on an imbalanced set and learned the following
+        - learned what scaling does and how it helps
+        - used linear regression to fit the model
+        - learned how to run and read the confusion matrix
+        - learned how to read and run the classification report
+        - and also learned the importance behind running an roc-auc score
+    Learned the difference between classification tasks and regression problems
+# Day Three
+    Appling SMOTE
+    Train on balanced training data
+
+## Notes
 
 ## What I learned

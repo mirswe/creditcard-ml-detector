@@ -44,7 +44,27 @@
 # Day Three
     Appling SMOTE
     Train on balanced training data
+    Train using Log Regression
+    Train using Random Forest
 
 ## Notes
-
+    Applied SMOTE and trained using Logistic Regression and Random Forest Classifier
+    Logistic Regression
+        Logistic regression got 88 True Positives, 10 False Negatives, 570 False Positives
+        Logistic Regression also got a ROC AUC score of 98%, however it sacrificed having a low precision (13%) and f1 score (23%) for a very high recall score (89%)
+    Random Forest Classifier
+        Random Forest got 81 True Positives, 17 False Negatives, 17 False Positives
+        Random Forest also got a ROC AUC score of 96% which was lower, high precision (83%) meaning most flagged fraud cases was truly fraud, slightly lower recall than lg recall but its still (83%), and f1 score is a strong balance between precision and recall for fraud detection (83%)
+    Summary
+        Even though the ROC AUC score was slightly lower for Random Forest, I'd rather choose rf since its beneficial for fraud detection to avoid unnecessary alerts.
+        If catching the most fraud cases (higher recall) is more critical, you might prefer Logistic Regression. If avoiding false positives is a priority (e.g., reducing manual checks), Random   Forest is the better choice. (which is mine)
 ## What I learned
+    Learned what SMOTE is and how it works
+        learned how it balances the minority out by balancing the class distribution by generating synthetic samples (which was class 1 or fraud cases)
+    Learned how to train using Logistic Regression
+        learned its benefits and weaknesses, i got more catches for fraud using this, however, the downside to this is that I alot of false positives
+    Learned how to train using Random Forest
+        also learned that its the most optimal way, even though the recall was lower, meaning catching slightly fewer fraud cases, it was more balanced and avoiding false positives 
+# How I could pursue this
+    I could apply this to a real world project like a future website that has a payment service option
+    Could fine tune Random Forest, or even try out other models
